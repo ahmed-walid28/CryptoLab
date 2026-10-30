@@ -1,11 +1,11 @@
-# 🛡️ CryptoLab — Cryptography Learning & Encryption Tool
+# CryptoLab — Cryptography Learning & Encryption Tool
 ### *Classical & Modern Cryptography Web Application*
 
 **CryptoLab** is an interactive, educational, and fully functional web application engineered for the university course **Computer Security and Cryptography**. It bridges the gap between historical encryption techniques and modern cryptographic standards through hands-on encryption, decryption, step-by-step mathematical breakdowns, and real-time visualizers.
 
 ---
 
-## 🌟 Key Features
+## Key Features
 
 1. **Complete Algorithm Suite**:
    - **8 Classical Ciphers**: Caesar, Vigenère, Playfair (5×5 matrix), Hill (2×2 linear algebra), Atbash, Affine, Rail Fence (zig-zag wave), and Columnar Transposition.
@@ -26,7 +26,7 @@
 
 ---
 
-## 📁 Project Architecture
+## Project Architecture
 
 ```
 d:/CryptoLab/
@@ -53,7 +53,7 @@ d:/CryptoLab/
 
 ---
 
-## 🚀 How to Run the Application
+## How to Run the Application
 
 Because CryptoLab is built with pure standard HTML5, CSS3, and ES6+ JavaScript, **no build tools, compilers, or server dependencies are required**.
 
@@ -78,7 +78,7 @@ npx serve d:\CryptoLab
 
 ---
 
-## 🔬 Implemented Algorithms & Formulas
+## Implemented Algorithms & Formulas
 
 ### 1. Caesar Cipher
 - **Category**: Classical Monoalphabetic Substitution
@@ -157,7 +157,7 @@ npx serve d:\CryptoLab
 
 ---
 
-## 🧪 Test Vectors & Verification
+## Test Vectors & Verification
 
 | Algorithm | Input Text | Key / Parameters | Expected Output |
 | :--- | :--- | :--- | :--- |
@@ -174,13 +174,13 @@ npx serve d:\CryptoLab
 
 ---
 
-## ⚠️ Security Notice
+## Security Notice
 
 > **Educational Purpose**: Classical ciphers (Caesar, Vigenère, Playfair, Hill, Atbash, Affine, Rail Fence, Columnar) are provided strictly for **pedagogical instruction** and historical analysis. They are vulnerable to modern cryptanalysis (frequency analysis, Kasiski examination, linear equation solvers, brute force) and must **never** be used for securing sensitive real-world information. Modern production environments must rely exclusively on vetted cryptographic standards such as AES-256-GCM, RSA-4096 / Ed25519, and SHA-256 / SHA-3.
 
 ---
 
-## 👨‍🏫 Course Information
+## Course Information
 
 - **Course**: Computer Security and Cryptography
 - **Project**: CryptoLab — Interactive Cryptographic Learning & Encryption Tool
