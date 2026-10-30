@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CryptoLab — Interactive Web Application for Classical & Modern Cryptography. Designed for Computer Security and Cryptography courses.">
+    <meta name="keywords" content="cryptography, encryption, decryption, caesar, vigenere, playfair, hill, affine, aes, rsa, sha256, diffie-hellman">
+    <title>CryptoLab — Cryptography Learning & Encryption Tool</title>
+    
+    <!-- Google Fonts: Inter & Fira Code -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="brand-logo">🛡️</div>
+                <div class="brand-info">
+                    <h1>Crypto<span>Lab</span></h1>
+                    <p>Classical & Modern Cryptography</p>
+                </div>
+            </div>
+
+            <nav class="sidebar-nav">
+                <!-- Classical Cryptography Section -->
+                <div class="nav-section-title">
+                    <span>Classical Ciphers</span>
+                    <span class="nav-badge badge-classical">8 Ciphers</span>
+                </div>
+                <ul class="nav-list">
+                    <li>
+                        <a href="#" class="nav-item active" data-algo="caesar">
+                            <div class="nav-item-left">
+                                <span class="nav-icon">🏛️</span>
+                                <span>Caesar Cipher</span>
+                            </div>
+                            <span class="nav-badge badge-classical">Shift</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-item" data-algo="vigenere">
+                            <div class="nav-item-left">
+                                <span class="nav-icon">📜</span>
+                                <span>Vigenère Cipher</span>
+                            </div>
+                            <span class="nav-badge badge-classical">Poly</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-item" data-algo="playfair">
+                            <div class="nav-item-left">
+                                <span class="nav-icon">🔲</span>
+                                <span>Playfair Cipher</span>
+                            </div>
+                            <span class="nav-badge badge-classical">5×5</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-item" data-algo="hill">
+                            <div class="nav-item-left">
+                                <span class="nav-icon">📐</span>
+                                <span>Hill Cipher (2×2)</span>
+                            </div>
+                            <span class="nav-badge badge-classical">Matrix</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-item" data-algo="atbash">
+                            <div class="nav-item-left">
+                                <span class="nav-icon">🔄</span>
+                                <span>Atbash Cipher</span>
+                            </div>
+                            <span class="nav-badge badge-classical">A↔Z</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-item" data-algo="affine">
+                            <div class="nav-item-left">
+                                <span class="nav-icon">➗</span>
+                                <span>Affine Cipher</span>
+                            </div>
+                            <span class="nav-badge badge-classical">ax+b</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-item" data-algo="railfence">
+                            <div class="nav-item-left">
+                                <span class="nav-icon">⚡</span>
+                                <span>Rail Fence Cipher</span>
+                            </div>
+                            <span class="nav-badge badge-classical">Zig-Zag</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-item" data-algo="columnar">
+                            <div class="nav-item-left">
+                                <span class="nav-icon">📊</span>
+                                <span>Columnar Transposition</span>
+                            </div>
+                            <span class="nav-badge badge-classical">Grid</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- Modern Cryptography Section -->
+                <div class="nav-section-title">
+                    <span>Modern Cryptography</span>
+                    <span class="nav-badge badge-modern">4 Standards</span>
+                </div>
+                <ul class="nav-list">
+                    <li>
+                        <a href="#" class="nav-item" data-algo="aes">
+                            <div class="nav-item-left">
+                                <span class="nav-icon">🔒</span>
+                                <span>AES-GCM (256-bit)</span>
+                            </div>
+                            <span class="nav-badge badge-modern">WebCrypto</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-item" data-algo="rsa">
+                            <div class="nav-item-left">
+                                <span class="nav-icon">🔑</span>
+                                <span>RSA (Public Key)</span>
+                            </div>
+                            <span class="nav-badge badge-modern">Dual Mode</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-item" data-algo="sha256">
+                            <div class="nav-item-left">
+                                <span class="nav-icon">#</span>
+                                <span>SHA-256 Hashing</span>
+                            </div>
+                            <span class="nav-badge badge-modern">Digest</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-item" data-algo="diffieHellman">
+                            <div class="nav-item-left">
+                                <span class="nav-icon">🤝</span>
+                                <span>Diffie-Hellman</span>
+                            </div>
+                            <span class="nav-badge badge-modern">Exchange</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- Educational & Reference Views -->
+                <div class="nav-section-title">
+                    <span>Learning & Reference</span>
+                </div>
+                <ul class="nav-list">
+                    <li>
+                        <a href="#" class="nav-item" data-view="comparison">
+                            <div class="nav-item-left">
+                                <span class="nav-icon">📋</span>
+                                <span>Comparison Table</span>
+                            </div>
+                            <span class="nav-badge badge-tool">Matrix</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-item" data-view="theory">
+                            <div class="nav-item-left">
+                                <span class="nav-icon">🎓</span>
+                                <span>Theory & Learning Hub</span>
+                            </div>
+                            <span class="nav-badge badge-tool">Guide</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="course-tag">
+                    <strong>Computer Security & Cryptography</strong>
+                    <span>University Academic Project</span>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Top Navigation Bar -->
+            <header class="topbar">
+                <div class="topbar-left">
+                    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">☰</button>
+                    <div class="breadcrumb-wrap">
+                        <span class="breadcrumb-label">Algorithm / Primitive</span>
+                        <div class="breadcrumb-val" id="breadcrumbVal">Caesar Cipher</div>
+                    </div>
+                </div>
+
+                <div class="topbar-right">
+                    <button class="btn btn-outline btn-sm" onclick="window.CryptoLabApp?.showQuickHelp?.() || document.querySelector('[data-view=theory]').click()">
+                        <span>📖 Learn Theory</span>
+                    </button>
+                    <button class="btn btn-secondary btn-sm" onclick="document.querySelector('[data-view=comparison]').click()">
+                        <span>📊 Comparison Table</span>
+                    </button>
+                </div>
+            </header>
+
+            <!-- Dynamic Workspace Body -->
+            <div id="mainWorkspace">
+                <!-- Dynamically rendered by app.js -->
+            </div>
+        </main>
+    </div>
+
+    <!-- Toast Notification Container -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- Algorithm Scripts (Dependency Order) -->
+    <script src="js/ciphers/caesar.js"></script>
+    <script src="js/ciphers/vigenere.js"></script>
+    <script src="js/ciphers/playfair.js"></script>
+    <script src="js/ciphers/hill.js"></script>
+    <script src="js/ciphers/atbash.js"></script>
+    <script src="js/ciphers/affine.js"></script>
+    <script src="js/ciphers/railfence.js"></script>
+    <script src="js/ciphers/columnar.js"></script>
+    <script src="js/ciphers/aes.js"></script>
+    <script src="js/ciphers/rsa.js"></script>
+    <script src="js/ciphers/sha256.js"></script>
+    <script src="js/ciphers/diffieHellman.js"></script>
+
+    <!-- Main Application Script -->
+    <script src="js/app.js"></script>
+</body>
+</html>
